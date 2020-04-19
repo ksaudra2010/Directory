@@ -26,7 +26,7 @@ API.generateUsers().then(res => {
       [name]: value
     });
   };
-  
+
 //   The search and filter functions 
 userSearch = (user) => {
         return user.name.first.toLowerCase().indexOf(this.state.search.toLowerCase())===0 || 
@@ -42,11 +42,14 @@ userFilter = (user1,user2) => {
 }
   render() {
     return (<div>
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid" className="p-3 mb-2 bg-warning text-dark">
   <div className="container">
     <h1 className="display-4">Employee Directory</h1>
     <p className="lead">Search Current Employees</p>
     <input name="search" onChange={this.handleInputChange}/>
+    <br></br>
+    <br></br>
+    <p className="display-5">Click on Last Name or Country Header to Filter</p>
   </div>
 </div>
       <Container>
